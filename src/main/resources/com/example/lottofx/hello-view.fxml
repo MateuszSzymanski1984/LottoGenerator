@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="paneWindow77" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="507.0" prefWidth="779.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lottofx.HelloController">
+   <children>
+      <TextField fx:id="pokazLiczby" layoutX="253.0" opacity="0.0" prefHeight="49.0" prefWidth="358.0" style="-fx-background-color: silver;">
+         <font>
+            <Font name="Courier New" size="12.0" />
+         </font></TextField>
+      <TabPane layoutX="23.0" layoutY="19.0" prefHeight="466.0" prefWidth="727.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Ostatnie losy">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="433.0" prefWidth="306.0">
+                     <children>
+                        <Button fx:id="przycisk" layoutX="356.0" layoutY="200.0" mnemonicParsing="false" onAction="#Ile" text="Naciśnij">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Label fx:id="wygeneruj" alignment="CENTER" layoutX="233.0" layoutY="152.0" prefHeight="26.0" prefWidth="304.0" text="WYGENERUJ WYNIKI Z ZAKRESU OSTATNICH LOSOWAŃ">
+                           <textFill>
+                              <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </textFill>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <ComboBox id="combo" fx:id="combo1" layoutX="253.0" layoutY="238.0" prefHeight="23.0" prefWidth="264.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ComboBox>
+                        <Slider fx:id="suwak" layoutX="37.0" layoutY="91.0" max="100.0" min="5.0" prefHeight="49.0" prefWidth="658.0" showTickLabels="true" showTickMarks="true" value="7.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Slider>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Wykres słupkowy">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BarChart fx:id="wykres" layoutX="-6.0" layoutY="70.0" prefHeight="285.0" prefWidth="742.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis prefHeight="187.0" prefWidth="38.0" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Temperatura">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="433.0" prefWidth="450.0">
+                     <children>
+                        <Pane layoutX="260.0" layoutY="48.0" prefHeight="136.0" prefWidth="240.0" style="-fx-background-color: silver;">
+                           <children>
+                              <TextField fx:id="grupa" layoutY="60.0" prefHeight="34.0" prefWidth="240.0" style="-fx-background-color: gray;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                              <Button fx:id="oblicz" layoutX="3.0" mnemonicParsing="false" onAction="#Obliczjakgraja" prefHeight="55.0" prefWidth="240.0" text="OBLICZ JAK GRAJĄ TWOJE LICZBY">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                              <ComboBox fx:id="combo3" layoutX="2.0" layoutY="99.0" prefHeight="34.0" prefWidth="240.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ComboBox>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Pane>
+                        <Pane layoutX="260.0" layoutY="234.0" prefHeight="125.0" prefWidth="240.0" style="-fx-background-color: silver;">
+                           <children>
+                              <Label alignment="CENTER" layoutY="55.0" prefHeight="34.0" prefWidth="240.0" text="Temperatura liczb">
+                                 <font>
+                                    <Font size="23.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Label>
+                              <ComboBox fx:id="combo2" layoutX="5.0" prefHeight="55.0" prefWidth="231.0" style="-fx-background-color: gray;" />
+                              <Button fx:id="przycisk2" layoutX="61.0" layoutY="95.0" mnemonicParsing="false" onAction="#Oblicztemperature" text="Oblicz temperature">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Button>
+                           </children>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Pane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab id="TabGradientowy" text="Inne operacje">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
