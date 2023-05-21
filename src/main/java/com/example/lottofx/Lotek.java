@@ -33,6 +33,9 @@ public class Lotek {
             this.year = year;
             this.result = result;
         }
+        public Lotek(){
+
+        }
 
         int year;
 
