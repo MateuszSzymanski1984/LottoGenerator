@@ -1,5 +1,4 @@
-package com.example.lottofx;
-
+package RMI;
 
 import java.util.List;
 
